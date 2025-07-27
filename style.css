@@ -108,3 +108,25 @@ input {
     column-gap: 20px;
     grid-template-columns: min-content 1fr;
 }
+
+#buttons-container {
+    align-items: center;
+    justify-content: center;
+    column-gap: 30px;
+    grid-template-columns: repeat(3, minmax(60px, 100px));
+}
+
+button {
+    height: 40px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    background-color: dodgerblue;
+    border: none;
+}
+
+button:hover {
+    filter: brightness(90%);
+    cursor: pointer;
+}
