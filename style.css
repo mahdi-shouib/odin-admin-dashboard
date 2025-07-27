@@ -26,6 +26,7 @@ html, body {
     grid-area: side;
     display: grid;
     color: white;
+    font-weight: 600;
     background-color: dodgerblue;
     row-gap: 60px;
     box-shadow: 1px 0 10px rgba(0, 0, 0, 0.4);
