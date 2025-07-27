@@ -6,6 +6,7 @@ html, body {
     display: grid;
     height: 100vh;
     grid-template-rows: 175px repeat(3, 1fr);
+    grid-template-columns: 300px repeat(3, 1fr);
     grid-template-areas: 
     "side header header header"
     "side content content content"
@@ -14,12 +15,15 @@ html, body {
 }
 
 .container {
-    border: 1px solid;
     padding: 10px;
 }
 
 #side {
     grid-area: side;
+    display: grid;
+    color: white;
+    background-color: dodgerblue;
+    grid-template-rows: auto repeat(2, 1fr);
 }
 
 #header {
@@ -28,4 +32,15 @@ html, body {
 
 #content {
     grid-area: content;
+}
+
+#logo {
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    column-gap: 10px;
+    align-items: center;
+}
+
+#dashboard-svg {
+    fill: white;
 }
