@@ -1,0 +1,31 @@
+html, body {
+    margin: 0;
+}
+
+#main {
+    display: grid;
+    height: 100vh;
+    grid-template-rows: 175px repeat(3, 1fr);
+    grid-template-areas: 
+    "side header header header"
+    "side content content content"
+    "side content content content"
+    "side content content content";
+}
+
+.container {
+    border: 1px solid;
+    padding: 10px;
+}
+
+#side {
+    grid-area: side;
+}
+
+#header {
+    grid-area: header;
+}
+
+#content {
+    grid-area: content;
+}
