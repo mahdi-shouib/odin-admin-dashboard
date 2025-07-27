@@ -1,15 +1,13 @@
 * {
-    font-family: "Roboto", monospace, serif;
-}
-
-html, body {
+    padding: 0;
     margin: 0;
+    font-family: "Roboto", monospace, serif;
 }
 
 #main {
     display: grid;
     height: 100vh;
-    grid-template-rows: 175px repeat(3, 1fr);
+    grid-template-rows: 200px repeat(3, 1fr);
     grid-template-columns: 300px repeat(3, 1fr);
     grid-template-areas: 
     "side header header header"
@@ -30,12 +28,17 @@ html, body {
     font-weight: 600;
     background-color: dodgerblue;
     row-gap: 60px;
-    box-shadow: 1px 0 10px rgba(0, 0, 0, 0.4);
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
     grid-template-rows: repeat(3, min-content);
 }
 
 #header {
     grid-area: header;
+    display: grid;
+    padding-left: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    grid-template-rows: 50% 50%;
+    grid-template-columns: 60% 40%;
 }
 
 #content {
@@ -59,13 +62,6 @@ html, body {
     align-items: center;
 }
 
-#header {
-    display: grid;
-    padding-left: 30px;
-    grid-template-rows: 50% 50%;
-    grid-template-columns: 60% 40%;
-}
-
 .header-container {
     display: grid;
 }
@@ -84,6 +80,10 @@ html, body {
     width: 50px;
 }
 
+#greet-container > img {
+    width: 70px;
+}
+
 #profile-container {
     justify-content: end;
     align-items: center;
@@ -99,4 +99,12 @@ input {
     background-color: #E0E0F0;
     border-radius: 15px;
     border: none;
+}
+
+#greet-container {
+    align-items: center;
+    white-space: nowrap;
+    font-weight: bold;
+    column-gap: 20px;
+    grid-template-columns: min-content 1fr;
 }
