@@ -1,3 +1,7 @@
+* {
+    font-family: "Roboto", monospace, serif;
+}
+
 html, body {
     margin: 0;
 }
