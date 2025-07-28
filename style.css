@@ -42,7 +42,11 @@
 }
 
 #content {
+    z-index: -1;
     grid-area: content;
+    background-color: #E0E0F0;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
 }
 
 #logo {
@@ -129,4 +133,29 @@ button {
 button:hover {
     filter: brightness(90%);
     cursor: pointer;
+}
+
+#posts {
+    display: grid;
+    grid-template-rows: min-content repeat(3, 1fr);
+    grid-template-columns: 1fr 1fr;
+}
+
+#posts > h4 {
+    grid-column: span 2;
+}
+
+#secondary-posts {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+#announcements {
+    display: grid;
+    grid-template-rows: min-content repeat(3, 1fr);
+}
+
+#trending {
+    display: grid;
+    grid-template-rows: min-content repeat(4, 1fr);
 }
