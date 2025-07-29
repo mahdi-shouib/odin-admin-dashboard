@@ -82,7 +82,7 @@ body {
     width: 25px;
 }
 
-#profile-container > img {
+img {
     width: 50px;
 }
 
@@ -158,7 +158,7 @@ h3 {
 
 #secondary-posts {
     display: grid;
-    grid-template-rows: 1fr min-content;
+    grid-template-rows: min-content 1fr;
     row-gap: 20px;
 }
 
@@ -188,7 +188,6 @@ h3 {
 
 .post > div > p {
     font-size: 15px;
-    color: gray;
 }
 
 .icons-container {
@@ -202,7 +201,7 @@ h3 {
 
 #announcements-posts {
     padding: 25px;
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: repeat(3, min-content);
 }
 
 .announcement {
@@ -218,10 +217,33 @@ h3 {
 
 .announcement > div > p {
     font-size: 13px;
-    color: gray;
+    overflow: hidden;
+    max-height: 2rem;
 }
 
 hr {
-    margin-top: 5px;
+    margin-top: 1em;
     border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+#trending-posts {
+    padding: 0 25px;
+    align-content: space-evenly;
+    grid-template-rows: repeat(4, min-content);
+}
+
+.trending-post {
+    display: grid;
+    align-items: center;
+    grid-template-columns: min-content 1fr;
+    column-gap: 1em;
+}
+
+.trending-post > div > h4 {
+    font-weight: 600;
+    margin-bottom: 2px;
+}
+
+p {
+    color: gray;
 }
