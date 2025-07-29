@@ -58,8 +58,7 @@ body {
     align-items: center;
 }
 
-.nav {    /* row-gap: 30px; */
-
+.nav {
     display: grid;
     padding-left: 10px;
     font-size: 20px;
@@ -158,30 +157,28 @@ h3 {
 
 #secondary-posts {
     display: grid;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr min-content;
+    row-gap: 20px;
 }
 
-#announcements {
+#announcements, #trending{
     display: grid;
     grid-template-rows: min-content 1fr;
     row-gap: 20px;
 }
 
-#trending {
+.post, #announcements-posts, #trending-posts {
     display: grid;
-    grid-template-rows: min-content repeat(4, 1fr);
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
 }
 
 .post {
-    display: grid;
-    box-sizing: border-box;
     grid-template-rows: 1fr 60px;
     min-width: 250px;
-    border-radius: 10px;
     padding: 40px 20px 0 20px;
     border-left: 8px solid #F7B718;
-    background-color: white;
-    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
 }
 
 .post > div > h4 {
@@ -203,11 +200,7 @@ h3 {
 }
 
 #announcements-posts {
-    display: grid;
-    background-color: white;
     padding: 25px;
-    border-radius: 10px;
-    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);;
     grid-template-rows: repeat(3, 1fr);
 }
 
