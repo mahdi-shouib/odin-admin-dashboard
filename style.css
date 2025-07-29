@@ -145,7 +145,7 @@ button:hover {
     gap: 20px;
 }
 
-#posts > h4 {
+#posts > h3 {
     width: 100%;
     font-weight: 600;
     grid-column: span 2;
@@ -164,4 +164,34 @@ button:hover {
 #trending {
     display: grid;
     grid-template-rows: min-content repeat(4, 1fr);
+}
+
+.post {
+    display: grid;
+    box-sizing: border-box;
+    grid-template-rows: 1fr 60px;
+    min-width: 250px;
+    border-radius: 10px;
+    padding: 40px 20px 0 20px;
+    border-left: 8px solid #F7B718;
+    background-color: white;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+.post > div > h4 {
+    margin-bottom: 5px;
+}
+
+.post > div > p {
+    font-size: 15px;
+    color: gray;
+}
+
+.icons-container {
+    margin-top: 10px;
+    margin-right: 20px;
+    display: grid;
+    justify-self: end;
+    grid-template-columns: repeat(3, 25px);
+    column-gap: 20px;
 }
