@@ -145,9 +145,13 @@ button:hover {
     gap: 20px;
 }
 
-#posts > h3 {
+h3 {
+    font-size: 22px;
     width: 100%;
     font-weight: 600;
+}
+
+#posts > h3 {
     grid-column: span 2;
 }
 
@@ -158,7 +162,8 @@ button:hover {
 
 #announcements {
     display: grid;
-    grid-template-rows: min-content repeat(3, 1fr);
+    grid-template-rows: min-content 1fr;
+    row-gap: 20px;
 }
 
 #trending {
@@ -194,4 +199,34 @@ button:hover {
     justify-self: end;
     grid-template-columns: repeat(3, 25px);
     column-gap: 20px;
+}
+
+#announcements-posts {
+    display: grid;
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);;
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.announcement {
+    margin-top: 10px;
+    display: grid;
+    grid-template-rows: 1fr min-content;
+}
+
+.announcement > div > h4 {
+    margin-bottom: 3px;
+    font-size: 14px;
+}
+
+.announcement > div > p {
+    font-size: 13px;
+    color: gray;
+}
+
+hr {
+    margin-top: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
 }
